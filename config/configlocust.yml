@@ -1,0 +1,250 @@
+#为了方便引用，key名与压测脚本名称一致
+pcaddstu:
+  #测试环境test、uat
+  env: 'test'
+  #渠道
+  channel: 'pc'
+  #接口后缀地址
+  apiurl: 'api/a/student/addAndEditStudent'
+  #是否循环取数，true循环取数，如果为false，当参数用户数取完后结束压测
+  iscircle: 'true'
+  #是否并发，如果为true，所有用户到达集合点，同时发起请求，false则不并发
+  isbf: 'true'
+  #请求body,指向请求报文文件路径
+  reqfile: 'F:\pyproject\happyPerf\reqdatas\pcaddstus.json'
+  #年级参数化--5年级
+  grade: '5'
+  #课程产品id，提交生成订单使用
+  productid: '91423'
+  #注册登陆手机号[]，该参数为列表,如果注册用作该区间的循环取值，登陆则需要维护多个手机号
+  telno:
+  - '19921390111'
+  - '19921390129'
+  #登陆token列表[]
+  x-token:
+  - '1c0789b75d1f4666b8d3ff29315e35b5;:;1624416916657'
+  - 'e1659e031c1b40dabf625e003a18156a;:;1624417073640'
+#为了方便引用，同压测脚本名称一致
+registerlocust:
+  #测试环境test、uat
+  env: 'test'
+  #渠道
+  channel: 'app'
+  #接口后缀地址
+  apiurl: 'oauth/loginByCode'
+  #请求body,指向请求报文文件路径
+  reqfile: 'F:\pyproject\happyPerf\reqdatas\registerlocust.json'
+  #课程产品id，提交生成订单使用
+  productid: 91423
+  #是否循环取数，true循环取数，如果为false，当参数用户数取完后结束压测
+  iscircle: 'true'
+  #是否并发，如果为true，所有用户到达集合点，同时发起请求，false则不并发
+  isbf: 'true'
+  #压测总数，需大于等于locust-web设置的’Number of total users to simulate‘
+  yctotals: 5
+  #年级参数化--5年级
+  grade: '5'
+  #注册登陆手机号[]，该参数为列表,如果注册用作该区间的循环取值，登陆则需要维护多个手机号
+  telno:
+  - '19921390101'
+  - '19921395000'
+apporderlocust:
+  #测试环境test、uat
+  env: 'uat'
+  #渠道
+  channel: 'app'
+  #接口后缀地址
+  apiurl: 'hall/order/generateOrder'
+  #请求body,指向请求报文文件路径
+  reqfile: 'F:\pyproject\happyPerf\reqdatas\apporderlocust.json'
+  #reqfile: 'F:\\pyproject\\happyPerf\\reqdatas\\xmltojson.xml'
+  #是否循环取数，true循环取数，如果为false，当参数用户数取完后结束压测
+  iscircle: 'true'
+  #是否并发，如果为true，所有用户到达集合点，同时发起请求，false则不并发
+  isbf: 'true'
+  #课程产品id，提交订单使用
+  #压测总数，需大于等于locust-web设置的’Number of total users to simulate‘
+  yctotals: 5
+  productid: '51194'
+  #登陆mobiles，必须是str-加引号，必须是已完善学生信息的用户，如果需要大批量的数据参数化，可以把数据存储在excel或txt文件中，通过读取文件获取
+  telno:
+  - '13821370101'
+  - '13821370102'
+  - '13821370103'
+  - '13821370104'
+  - '13821370105'
+  - '13821370106'
+  - '13821370107'
+  - '13821370108'
+  - '13821370109'
+  - '13821370100'
+getcoupon:
+  #测试环境test、uat
+  env: 'test'
+  #渠道
+  channel: 'app'
+  #接口后缀地址
+  apiurl: 'hall/student/receiveTransferCoupon'
+  #请求body,指向请求报文文件路径
+  reqfile: 'F:\pyproject\happyPerf\reqdatas\getcoupon.json'
+  #是否循环取数，true循环取数，如果为false，当参数用户数取完后结束压测
+  iscircle: 'true'
+  #是否并发，如果为true，所有用户到达集合点，同时发起请求，false则不并发
+  isbf: 'true'
+  #压测总数，需大于等于locust-web设置的’Number of total users to simulate‘
+  yctotals: 5
+  #登陆mobiles，必须是str-加引号，必须是已完善学生信息的用户
+  couponid: 'ac652f64340246c5bdd9019a8f7b6286'
+  telno:
+  #test、uat
+  - '13821370101'
+  - '13821370102'
+  - '13821370103'
+  - '13821370104'
+  - '13821370105'
+  - '13821370106'
+  - '13821370107'
+  - '13821370108'
+  - '13821370109'
+  - '13821370100'
+searchclass:
+  #测试环境test、uat
+  env: 'test'
+  #渠道
+  channel: 'app'
+  #接口后缀地址
+  apiurl: 'hall/pxxclass/findClassInfoList'
+  #请求body,指向请求报文文件路径
+  reqfile: 'F:\pyproject\happyPerf\reqdatas\searchclass.json'
+  #是否循环取数，true循环取数，如果为false，当参数用户数取完后结束压测
+  iscircle: 'true'
+  #是否并发，如果为true，所有用户到达集合点，同时发起请求，false则不并发
+  isbf: 'true'
+  #压测总数，需大于等于locust-web设置的’Number of total users to simulate‘
+  yctotals: 5
+  grade:
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  cityid:
+  - '1953'
+  - '1940'
+  - '1500'
+  subject:
+  - '1'
+  - '4'
+  - '5'
+  - '9'
+  #登陆mobiles，必须是str-加引号，必须是已完善学生信息的用户
+  telno:
+  #test、uat
+  - '13821370101'
+  - '13821370102'
+  - '13821370103'
+  - '13821370104'
+  - '13821370105'
+  - '13821370106'
+  - '13821370107'
+  - '13821370108'
+  - '13821370109'
+  - '13821370100'
+addinvoice:
+  #测试环境test、uat
+  env: 'test'
+  #渠道
+  channel: 'app'
+  #接口后缀地址
+  apiurl: 'hall/invoice/add'
+  #请求body,指向请求报文文件路径
+  reqfile: 'F:\pyproject\happyPerf\reqdatas\addinvoice.json'
+  #是否循环取数，true循环取数，如果为false，当参数用户数取完后结束压测
+  iscircle: 'true'
+  #是否并发，如果为true，所有用户到达集合点，同时发起请求，false则不并发
+  isbf: 'true'
+  #压测总数，需大于等于locust-web设置的’Number of total users to simulate‘
+  yctotals: 5
+  orderid: 'f74839e4218643eab55ec8a0fdc674dd'
+  telno:
+  #test、uat
+  - '18565667162'
+  - '13821370101'
+  - '13821370102'
+  - '13821370103'
+  - '13821370104'
+  - '13821370105'
+usecoupon:
+  #测试环境test、uat，必填
+  env: 'test'
+  #渠道，必填
+  channel: 'app'
+  #接口后缀地址，必填
+  apiurl: 'hall/order/generateOrder'
+  #请求body,指向请求报文文件路径，必填
+  reqfile: 'F:\pyproject\happyPerf\reqdatas\usecoupon.json'
+  #是否循环取数，true循环取数，如果为false，当参数用户数取完后结束压测，必填
+  iscircle: 'true'
+  #是否并发，如果为true，所有用户到达集合点，同时发起请求，false则不并发，必填
+  isbf: 'true'
+  #压测用户总数，限单个用户循环取数压测使用，需大于等于locust-web设置的’Number of total users to simulate‘，非必填（默认值100）
+  yctotals: 5
+  #优惠券id
+  couponid:
+  - '2fe1cb1da0024d26a198b1583f0e8bd2'
+  classid:
+  - '4cda24fa1dfb4abd9070948360447569'
+  - '8493b475db6c4eff8cef8ac111f93967'
+  #- 'f021fc49ce1b4c64963a96598c2536f5'
+  productid:
+  - '51108'
+  - '51095'
+  #- '71569'
+  #参数化数据的excel文件，通过读取excel获取参数化数据，如果不需要就不必填写
+  #datas: 'F:\pyproject\happyPerf\datas\usecoupon.xlsx'
+  #参数化登陆mobiles，必须是已完善学生信息的用户,如果需要大批量的数据参数化，可以把数据存储在excel或txt文件中，通过读取文件获取
+  telno:
+  #test、uat
+  - '13921370103'
+  - '13921370103'
+  - '13921370103'
+mixcj:
+  #测试环境test、uat，必填
+  env: 'test'
+  #渠道，必填
+  channel: 'app'
+  #接口后缀地址，必填
+  apiurl: 'hall/order/generateOrder'
+  #请求body,指向请求报文文件路径，必填
+  reqfile: 'F:\pyproject\happyPerf\reqdatas\usecoupon.json'
+  #是否循环取数，true循环取数，如果为false，当参数用户数取完后结束压测，必填
+  iscircle: 'true'
+  #是否并发，如果为true，所有用户到达集合点，同时发起请求，false则不并发，必填
+  isbf: 'true'
+  #压测用户总数，限单个用户循环取数压测使用，需大于等于locust-web设置的’Number of total users to simulate‘，非必填（默认值100）
+  yctotals: 5
+  #优惠券id
+  couponid:
+  - '2fe1cb1da0024d26a198b1583f0e8bd2'
+  classid:
+  - '4cda24fa1dfb4abd9070948360447569'
+  - '8493b475db6c4eff8cef8ac111f93967'
+  #- 'f021fc49ce1b4c64963a96598c2536f5'
+  orderid: 'f74839e4218643eab55ec8a0fdc674dd'
+  productid:
+  - '51108'
+  - '51095'
+  #- '71569'
+  #参数化数据的excel文件，通过读取excel获取参数化数据，如果不需要就不必填写
+  #datas: 'F:\pyproject\happyPerf\datas\usecoupon.xlsx'
+  #参数化登陆mobiles，必须是已完善学生信息的用户,如果需要大批量的数据参数化，可以把数据存储在excel或txt文件中，通过读取文件获取
+  telno:
+  - '13821370101'
+  - '13821370102'
+  - '13821370103'
+  - '13821370104'
+  - '13821370105'
+  - '13821370106'
+  - '13821370107'
+  - '13821370108'
+  - '13821370109'
+  - '13821370100'

@@ -1,0 +1,49 @@
+loginapp:
+  #测试环境test、uat
+  env: 'test'
+  #渠道
+  channel: 'app'
+  #验证码接口
+  codeurl: 'oauth/send/code'
+  #接口后缀地址
+  apiurl: 'oauth/loginByCode'
+  #获取学生id接口
+  stuurl: 'hall/parent/findParentInfo'
+  #请求body,指向请求报文json文件
+  reqjson: 'F:\pyproject\pxx\reqdatas\loginapp.json'
+  #登陆mobiles，必须是str-加引号，必须是已完善学生信息的用户
+  telno:
+  - '18565667162'
+  - '13821370101'
+  - '13821370102'
+  - '13821370103'
+  - '13821370104'
+  - '13821370105'
+  - '13821370106'
+  - '13821370107'
+  - '13821370108'
+  - '13821370109'
+  - '13821370100'
+loginpc:
+  #测试环境test、uat
+  env: 'uat'
+  #渠道
+  channel: 'pc'
+  #接口后缀地址
+  authurl: 'api/user/authenCheck'
+  #请求body,指向请求报文json文件
+  reqjson: 'F:\pyproject\pxx\reqdatas\loginpc.json'
+  #登陆mobiles，必须是str-加引号，必须是已完善学生信息的用户
+  telno:
+  #- '19921390111'
+  #- '19921390129'
+  #- '18603035521'
+  - '18566655875'
+  - '18565667162'
+  #- '19921360101'
+  #- '19921360102'
+  #- '19921360103'
+  password:  '123456'
+  x-token:
+  - '1c0789b75d1f4666b8d3ff29315e35b5;:;1624416916657'
+  - 'e1659e031c1b40dabf625e003a18156a;:;1624417073640'
