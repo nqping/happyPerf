@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<user_info>
+    <id>12</id>
+    <name>Tom</name>
+    <age>12</age>
+    <height>160</height>
+    <score>100</score>
+    <variance>12</variance>
+</user_info>

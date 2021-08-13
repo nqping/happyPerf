@@ -1,0 +1,41 @@
+{
+    "name": "中深一一",
+    "whetherBoy": true,
+    "grade": "7",
+    "mobile": "19921370101",
+    "birthday": "",
+    "cityId": "1953",
+    "campusId": "b0a5094df5464235bd9307d01150e1af",
+    "oldAttendClassId": "未知",
+    "oldAttendClassIdMiddle": "未知",
+    "oldAttendClassIdHigh": "未知",
+    "courseCounselorId": "1c0789b75d1f4666b8d3ff29315e35b5",
+    "fatherName": "",
+    "contactName": "",
+    "contactMobile": "",
+    "fatherMobile": "",
+    "fatherSmsEnable": "",
+    "motherName": "中深妈妈",
+    "motherMobile": "19921370101",
+    "motherSmsEnable": "",
+    "knownChannle": "2",
+    "email": "",
+    "idcardno": "",
+    "address": "",
+    "remarks": "",
+    "entryScore": [
+        {
+            "subjectId": "1",
+            "entryScore": "95"
+        },
+        {
+            "subjectId": "4",
+            "entryScore": "95"
+        }
+    ],
+    "consultStatus": "1",
+    "intentionSubject": "",
+    "userCampusIds": "1868a9d680b9418b99925fe5c85500ee",
+    "studentSource": 1,
+    "token": "1c0789b75d1f4666b8d3ff29315e35b5;:;1626227587852"
+}
