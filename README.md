@@ -78,7 +78,7 @@ pip install -r requirements.txt
   - yctotals: 100
   
   参数化数据保存的excel文件，通过读取excel获取参数化数据，如果不需要就不必填写
-  - datas: 'F:\pyproject\luckyperf\datas\usecoupon.xlsx'
+  - datas: 'F:\pyproject\happyPerf\datas\usecoupon.xlsx'
   
   登陆mobiles参数化数据，必须是已完善学生信息的用户，以便获取studentid
   - telno:
